@@ -1,4 +1,5 @@
 const $weatherContainer = document.querySelector('.weather-container');
+const $weatherHeader = document.querySelector('.weather-header');
 const $backBtn = document.querySelector('.back-btn');
 const $weatherArea = document.querySelector('.weather-area');
 
@@ -14,7 +15,7 @@ function renderPage() {
     const childName = query.split('&')[1].split('=')[1];
     const engAddr = []; // [parent, child]
     
-    $weatherArea.innerHTML = parentName + ' ' + childName;
+    $weatherHeader.innerHTML = parentName + ' > ' + childName;
 
     // getEngAddr(parentName, 1)
     // .then(addr => {
