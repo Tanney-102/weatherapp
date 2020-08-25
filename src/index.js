@@ -4,6 +4,9 @@ const $backBtn = document.querySelector('.back-btn');
 
 renderAreaBtns();
 $backBtn.addEventListener('click', renderAreaBtns);
+fetch('https://weather-refugee-camp.netlify.app/areaTree.json', {method:'get'})
+.then(res => { return res.json() })
+.then(data => console.log(data));
 
 //
 //functions
