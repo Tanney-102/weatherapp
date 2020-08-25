@@ -33,7 +33,7 @@ function renderPage() {
 async function getEngAddr(addr, id) {
     const _id = id === 1 ? 'siNm' : 'sggNm';
     const key = 'devU01TX0FVVEgyMDIwMDgyNjA0MjAzNzExMDEwNDU='
-    const url_base = `http://www.juso.go.kr/addrlink/addrEngApiJsonp.do/`
+    const url_base = `https://www.juso.go.kr/addrlink/addrEngApiJsonp.do/`
     const url = `${url_base}?confmKey=${key}&currentPage=1&countPerPage=10&resultType=json&keyword=${addr}`
     const engAddr = await fetch(url, {method:'get'})
                         .then(res => {return res.json(); })
