@@ -34,7 +34,7 @@ function renderAreaBtns() {
 
 async function getAreaCode(code) {
     const key = '8mVPSCRQrFyWbjSf4iKzswPjcu%2FRFGP1stNocEROwnzupvjPfF6MTVT5TSQRCwunx0HAcrMRDghtU0HKFRZumw%3D%3D'
-    const url_base = `https://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?ServiceKey=${key}&MobileOS=ETC&MobileApp=AppTesting&numOfRows=30`
+    const url_base = `http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?ServiceKey=${key}&MobileOS=ETC&MobileApp=AppTesting&numOfRows=30`
     const url = getAreaCodeURL(code, url_base);
     const config = {
         method: 'get',
