@@ -1,0 +1,21 @@
+body, main, button, a {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:'나눔고딕', NanumGothic, '돋움', Dotum, sans-serif;
+}
+
+a {
+    color: #000; 
+    text-decoration: none; 
+    line-height: 1;
+}
+
+ 
+.btn-hover:hover {
+    cursor:pointer;
+}
+
+button, input:focus { outline:none; }

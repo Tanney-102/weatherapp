@@ -1,0 +1,32 @@
+main .weather-container {
+    margin:0 auto;
+    width:80%;
+    height:100%;
+}
+
+main .weather-container .weather-header {
+    color:#b9b9b9;
+    height:50px;
+    border-bottom:1px solid #cfcfcf;
+    font-weight:600;
+
+    display:flex;
+    align-items:center;
+}
+
+main .weather-container .back-btn {
+    margin:10px 0 0 10px;
+    font-size:30px;
+    color:#72b8f6;
+    position: absolute;
+}
+
+main .weather-container .back-btn .fa-arrow-left:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+
+    transition: all 0.15s ease-in-out;
+}
