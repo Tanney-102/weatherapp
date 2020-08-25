@@ -2,7 +2,7 @@ const $weatherContainer = document.querySelector('.weather-container');
 const $backBtn = document.querySelector('.back-btn');
 const $weatherArea = document.querySelector('.weather-area');
 
-$backBtn.addEventListener('click', () => { location.replace('./index.html') });
+$backBtn.addEventListener('click', () => { location.replace('/') });
 renderPage();
 
 
