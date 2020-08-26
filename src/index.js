@@ -12,7 +12,7 @@ function renderAreaBtns() {
     $backBtn.style.display = 'none';
     $locSelectArea.innerHTML = '';
 
-    fetch('https://weather-refugee-camp.netlify.app/areaTree.json', {method:'get'})
+    fetch(`${origin_home}areaTree.json`, {method:'get'})
     .then(res => { return res.json() })
     .then(areaTree => {
         const areas = areaTree.area;
@@ -38,7 +38,7 @@ function renderSubAreaBtns(e) {
     $backBtn.style.display = 'block';
     $locSelectArea.innerHTML = ''
 
-    fetch('https://weather-refugee-camp.netlify.app/areaTree.json', {method:'get'})
+    fetch(`${origin_home}areaTree.json`, {method:'get'})
     .then(res => { return res.json() })
     .then(areaTree => {
         const areas = areaTree.subArea[parentName];
