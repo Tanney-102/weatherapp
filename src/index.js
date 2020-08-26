@@ -12,23 +12,19 @@ function renderAreaBtns() {
     $backBtn.style.display = 'none';
     $locSelectArea.innerHTML = '';
 
-    fetch(`${origin_home}areaTree.json`, {method:'get'})
-    .then(res => { return res.json() })
-    .then(areaTree => {
-        const areas = areaTree.area;
+    const areas = areaTree.area;
         
-        areas.forEach(name => {
-            $locSelectArea.innerHTML += `
-                <button name="${name}" class="location-btn btn-hover">
-                    ${name}
-                </button>
-            `;
-        });
-
-        for(let i=0; i<areas.length; i++) {
-            $locSelectArea.children[i].addEventListener('click', renderSubAreaBtns);
-        }
+    areas.forEach(name => {
+        $locSelectArea.innerHTML += `
+            <button name="${name}" class="location-btn btn-hover">
+                ${name}
+            </button>
+        `;
     });
+
+    for(let i=0; i<areas.length; i++) {
+        $locSelectArea.children[i].addEventListener('click', renderSubAreaBtns);
+    }
 }
 
 function renderSubAreaBtns(e) {
@@ -38,21 +34,17 @@ function renderSubAreaBtns(e) {
     $backBtn.style.display = 'block';
     $locSelectArea.innerHTML = ''
 
-    fetch(`${origin_home}areaTree.json`, {method:'get'})
-    .then(res => { return res.json() })
-    .then(areaTree => {
-        const areas = areaTree.subArea[parentName];
+    const areas = areaTree.subArea[parentName];
 
-        areas.forEach(name => {
-            const url = encodeURI(`./weather?parentName=${parentName}&childName=${name}`);
+    areas.forEach(name => {
+        const url = encodeURI(`./weather?parentName=${parentName}&childName=${name}`);
 
-            $locSelectArea.innerHTML += `
-                <button class="location-btn btn-hover">
-                    <a href="${url}" class="a-in-btn">
-                        ${name}
-                    </a>
-                </button>
-            `;
-        });
+        $locSelectArea.innerHTML += `
+            <button class="location-btn btn-hover">
+                <a href="${url}" class="a-in-btn">
+                    ${name}
+                </a>
+            </button>
+        `;
     });
 }
