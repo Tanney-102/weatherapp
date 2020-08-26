@@ -34,12 +34,12 @@ async function getEngAddr(parentName, childName) {
     const p_engAddr = await fetch(url_base + parentName, config)
                             .then(res => { return res.json() })
                             .then(data => {
-                                engAddr.push(data.message.result.translatedText);
+                                return data.message.result.translatedText;
                             });
     const c_engAddr = await fetch(url_base + childName, config)
                             .then(res => { return res.json() })
                             .then(data => {
-                                engAddr.push(data.message.result.translatedText);
+                                return data.message.result.translatedText;
                             });
     
     return [p_engAddr, c_engAddr];
