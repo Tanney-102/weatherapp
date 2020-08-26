@@ -30,3 +30,9 @@ main .weather-container .back-btn .fa-arrow-left:hover {
 
     transition: all 0.15s ease-in-out;
 }
+
+main .weather-container .weather-area {
+    border-bottom:1px solid #cfcfcf;
+    padding:50px 10px 100px;
+    height:400px;
+}
