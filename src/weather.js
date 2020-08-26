@@ -11,10 +11,12 @@ renderPage();
 // functions
 function renderPage() {
     const query = decodeURI(document.URL).split('?')[1];
-    const parentName = query.split('&')[0].split('=')[1];
-    const childName = query.split('&')[1].split('=')[1];
-    const parentNameEng = query.split('&')[2].split('=')[1];
-    const childNameEng = query.split('&')[3].split('=')[1];
+    const splitedQuery = query.split('&');
+    console.log(splitedQuery);
+    // const parentName = query.split('&')[0].split('=')[1];
+    // const childName = query.split('&')[1].split('=')[1];
+    // const parentNameEng = query.split('&')[2].split('=')[1];
+    // const childNameEng = query.split('&')[3].split('=')[1];
     
     $weatherHeader.innerHTML = parentName + ' > ' + childName;
     $weatherArea.innerHTML = `
