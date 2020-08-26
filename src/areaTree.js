@@ -1,23 +1,8 @@
 const areaTree = {
     "area" : [
-        "서울",
-        "인천",
-        "대전",
-        "대구",
-        "광주",
-        "부산",
-        "울산",
-        "세종특별자치시",
-        "경기도",
-        "강원도",
-        "충청북도",
-        "충청남도",
-        "경상북도",
-        "경상남도",
-        "전라북도",
-        "전라남도",
-        "제주도"
-    ],
+        "서울","인천","대전","대구","광주","부산","울산","세종특별자치시",
+        "경기도","강원도","충청북도","충청남도","경상북도","경상남도","전라북도","전라남도","제주도"
+        ],
     "subArea" : {
         "서울" : [
             "강남구","강동구","강북구","강서구","관악구",
@@ -42,7 +27,7 @@ const areaTree = {
             "군포시","김포시","남양주시","동두천시","부천시","성남시",
             "수원시","시흥시","안산시","안성시","안양시","양주시","양평군",
             "여주시","연천군","오산시","용인시","의왕시","의정부시","이천시",
-            "파주시","평택시","포천시","하남시"
+            "파주시","평택시","포천시","하남시","화성시"
         ],
         "강원도" : [
             "강릉시","고성군","동해시","삼척시","속초시","양구군",
@@ -73,6 +58,71 @@ const areaTree = {
             "무안군","보성군","순천시","신안군","여수시","영광군","영암군","완도군",
             "장성군","장흥군","진도군","함평군","해남군","화순군"
         ],
-        "제주도" : ["남제주군","북제주군","서귀포시","제주시"]
+        "제주도" : ["서귀포시","제주시"]
+    }
+}
+
+const areaTreeEng = {
+    "area" : [
+        "Seoul","Incheon","Daejeon","Daegu","Gwangju","Busan",
+        "Ulsan","Sejong","Gyeonggi-do","Gangwon-do","Chungcheongbuk-do",
+        "Chungcheongnam-do","Gyeongsangbuk-do","Gyeongsangnam-do","Jeollabuk-do",
+        "Jeollanam-do","Jeju-do"],
+    "subArea" : {
+        "Seoul" : [
+            "Gangnam-gu","Gangdong-gu","Gangbuk-gu","Gangseo-gu","Gwanak-gu","Gwangjin-gu",
+            "Guro-gu","Geumcheon-gu","Nowon-gu","Dobong-gu","Dongdaemun-gu","Dongjak-gu",
+            "Mapo-gu","Seodaemun-gu","Seocho-gu","Seongdong-gu","Seongbuk-gu","Songpa-gu",
+            "Yangcheon-gu","Yeongdeungpo-gu","Yongsan-gu","Eunpyeong-gu","Jongno-gu","Jung-gu",
+            "Jungnang-gu"],
+        "Incheon" : [
+            "Ganghwa-gun","Gyeyang-gu","Michuhol-gu","Namdong-gu","Dong-gu",
+            "Bupyeong-gu","Seo-gu","Yeonsu-gu","Ongjin-gun","Jung-gu"],
+        "Daejeon" : ["Daedeok-gu","Dong-gu","Seo-gu","Yuseong-gu","Jung-gu"],
+        "Daegu" : ["Nam-gu","Dalseo-gu","Dalseong-gun","Dong-gu","Buk-gu","Seo-gu","Suseong-gu","Jung-gu"],
+        "Gwangju" : ["Gwangsan-gu","Nam-gu","Dong-gu","Buk-gu","Seo-gu"],
+        "Busan" : [
+            "Gangseo-gu","Geumjeong-gu","Gijang-gun","Nam-gu","Dong-gu","Dongnae-gu",
+            "Busanjin-gu","Buk-gu","Sasang-gu","Saha-gu","Seo-gu","Suyeong-gu","Yeonje-gu",
+            "Yeongdo-gu","Jung-gu","Haeundae-gu"],
+        "Ulsan" : ["Jung-gu","Nam-gu","Dong-gu","Buk-gu","Ulju-gun"],
+        "Sejong" : ["Sejong"],
+        "Gyeonggi-do" : [
+            "Gapyeong-gun","Goyang-si","Gwacheon-si","Gwangmyeong-si","Gwangju-si","Guri-si",
+            "Gunpo-si","Gimpo-si","Namyangju-si","Dongducheon-si","Bucheon-si","Seongnam-si",
+            "Suwon-si","Siheung-si","Ansan-si","Anseong-si","Anyang-si","Yangju-si","Yangpyeong-gun",
+            "Yeoju-si","Yeoncheon-gun","Osan-si","Yongin-si","Uiwang-si","Uijeongbu-si","Icheon-si",
+            "Paju-si","Pyeongtaek-si","Pocheon-si","Hanam-si","Hwaseong-si"],
+        "Gangwon-do" : [
+            "Gangneung-si","Goseong-gun","Donghae-si","Samcheok-si","Sokcho-si","Yanggu-gun",
+            "Yangyang-gun","Yeongwol-gun","Wonju-si","Inje-gun","Jeongseon-gun","Cheorwon-gun",
+            "Chuncheon-si","Taebaek-si","Pyeongchang-gun","Hongcheon-gun","Hwacheon-gun","Hoengseong-gun"],
+        "Chungcheongbuk-do" : [
+            "Goesan-gun","Danyang-gun","Boeun-gun","Yeongdong-gun","Okcheon-gun","Eumseong-gun",
+            "Jecheon-si","Jincheon-gun","Cheongwon-gun","Cheongju-si","Chungju-si","Jeungpyeong-gun"],
+        "Chungcheongnam-do" : [
+            "Gongju-si","Geumsan-gun","Nonsan-si","Dangjin-si","Boryeong-si","Buyeo-gun",
+            "Seosan-si","Seocheon-gun","Asan-si","Yesan-gun","Cheonan-si","Cheongyang-gun",
+            "Taean-gun","Hongseong-gun", "gyeryong-si"],
+        "Gyeongsangbuk-do" : [
+            "Gyeongsan-si","Gyeongju-si","Goryeong-gun","Gumi-si",
+            "Gunwi-gun","Gimcheon-si","Mungyeong-si","Bonghwa-gun",
+            "Sangju-si","Seongju-gun","Andong-si","Yeongdeok-gun","Yeongyang-gun",
+            "Yeongju-si","Yeongcheon-si","Yecheon-gun","Ulleung-gun","Uljin-gun",
+            "Uiseong-gun","Cheongdo-gun","Cheongsong-gun","Chilgok-gun","Pohang-si"],
+        "Gyeongsangnam-do" : [
+            "Geoje-si","Geochang-gun","Goseong-gun","Gimhae-si","Namhae-gun","Masan-si","Miryang-si",
+            "Sacheon-si","Sancheong-gun","Yangsan-si","Uiryeong-gun","Jinju-si","Jinhae-si",
+            "Changnyeong-gun","Changwon-si","Tongyeong-si","Hadong-gun","Haman-gun","Hamyang-gun",
+            "Hapcheon-gun"],
+        "Jeollabuk-do" : [
+            "Gochang-gun","Gunsan-si","Gimje-si","Namwon-si","Muju-gun","Buan-gun","Sunchang-gun",
+            "Wanju-gun","Iksan-si","Imsil-gun","Jangsu-gun","Jeonju-si","Jeongeup-si","Jinan-gun"],
+        "Jeollanam-do" : [
+            "Gangjin-gun","Goheung-gun","Gokseong-gun","Gwangyang-si","Gurye-gun","Naju-si",
+            "Damyang-gun","Mokpo-si","Muan-gun","Boseong-gun","Suncheon-si","Sinan-gun","Yeosu-si",
+            "Yeonggwang-gun","Yeongam-gun","Wando-gun","Jangseong-gun","Jangheung-gun","Jindo-gun",
+            "Hampyeong-gun","Haenam-gun","Hwasun-gun"],
+        "Jeju-do" : ["Seogwipo-si","Jeju-si"]
     }
 }
