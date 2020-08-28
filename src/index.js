@@ -40,7 +40,7 @@ function renderSubAreaBtns(e) {
     const areasEng = areaTreeEng.subArea[parentNameEng];
 
     areas.forEach((name, idx) => {
-        const url = encodeURI(`./weather.html?pName=${parentName}&cName=${name}&pNameE=${parentNameEng}&cNameE=${areasEng[idx]}`);
+        const url = encodeURI(`./weather?pName=${parentName}&cName=${name}&pNameE=${parentNameEng}&cNameE=${areasEng[idx]}`);
 
         $locSelectArea.innerHTML += `
             <button class="location-btn btn-hover">

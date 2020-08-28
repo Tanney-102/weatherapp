@@ -1,7 +1,6 @@
-const $weatherContainer = document.querySelector('.weather-container');
 const $weatherHeader = document.querySelector('.weather-header');
 const $backBtn = document.querySelector('.back-btn');
-const $weatherArea = document.querySelector('.weather-area');
+const $weatherContent = document.getElementsByClassName('weather-content');
 
 $backBtn.addEventListener('click', () => { location.replace('/') });
 renderPage();
@@ -9,17 +8,41 @@ renderPage();
 
 //
 // functions
-function renderPage() {
+const renderPage = () => {
     const query = decodeURI(document.URL).split('?')[1];
     const splitedQuery = query.split('&');
-    const parentName = query.split('&')[0].split('=')[1];
-    const childName = query.split('&')[1].split('=')[1];
-    const parentNameEng = query.split('&')[2].split('=')[1];
-    const childNameEng = query.split('&')[3].split('=')[1];
+    const parentName = splitedQuery[0].split('=')[1];
+    const childName = splitedQuery[1].split('=')[1];
     
     $weatherHeader.innerHTML = parentName + ' > ' + childName;
-    $weatherArea.innerHTML = `
-            <h3>한글주소명 : ${parentName} ${childName}</h3>
-            <h3>영문주소명 : ${parentNameEng} ${childNameEng}</h3>
-        `
+    
+    // renderWeatherArea(parentName, childName);
+}
+
+const renderWeatherArea = (pName, cName) => {
+    const url = `/weather?region=${pName}-${cName}`;
+    const config = {
+        method:'get',
+    }
+
+    fetch(url, config)
+    .then(res => { return res.json() })
+    .then(result => {
+        result.forEach((_result, idx) => {
+            const $curContent = $weatherContent[idx];
+            _result.data.forEach(_data => {
+                $curContent.innerHTML += `
+                <div class="content-container">
+                    <div class="date">${_data.date}</div>
+                    <div class="weather-info">
+                        <div class="weather-state">${_data.state}</div>
+                        <div class="temperature">
+                            ${_data.state}&deg;C
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+        });
+    });
 }
