@@ -8,7 +8,7 @@ renderPage();
 
 //
 // functions
-const renderPage = () => {
+function renderPage() {
     const query = decodeURI(document.URL).split('?')[1];
     const splitedQuery = query.split('&');
     const parentName = splitedQuery[0].split('=')[1];
@@ -19,7 +19,7 @@ const renderPage = () => {
     // renderWeatherArea(parentName, childName);
 }
 
-const renderWeatherArea = (pName, cName) => {
+function renderWeatherArea(pName, cName) {
     const url = `/weather?region=${pName}-${cName}`;
     const config = {
         method:'get',
