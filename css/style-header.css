@@ -1,6 +1,6 @@
 header {
     height:72px;
-    
+
     display:flex;
     align-items:flex-end;
     box-shadow: 3px 0px 3px 1px #bdbdbd;
@@ -18,9 +18,4 @@ header .head-title {
 
     display:flex;
     align-items:center;
-}
-
-main .weather-container .weather-area {
-    border-bottom:1px solid #cfcfcf;
-    height:400px;
 }
