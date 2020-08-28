@@ -37,7 +37,7 @@ main .weather-container .back-btn .fa-arrow-left:hover {
 
 main .weather-container .weather-area {
     border-bottom:1px solid #cfcfcf;
-    padding:90px 10px 200px;
+    padding:50px 10px 200px;
     height:100%;
 
     display:flex;
