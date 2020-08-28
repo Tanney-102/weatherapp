@@ -1,3 +1,7 @@
+main {
+    padding:10px 0;
+}
+
 main .weather-container {
     margin:0 auto;
     width:80%;
@@ -50,11 +54,25 @@ main .weather-container .weathers {
 main .weather-container .weathers-site-name {
     color:#bfbfbf;
     font-size:20px;
+    height:30px;
 }
 
-/* main .weather-container .weather-content {
-    width:100%;
-} */
+main .weather-container .hr-box-container {
+    display:flex;
+    justify-content:flex-end;
+    margin:10px 0;
+}
+
+main .weather-container .hr-box {
+    width:100px;
+    height:3px;
+    background-color: #d7d7d7;
+    border-radius: 2px;
+}
+
+main .weather-container .weather-content {
+    margin-top:25px;   
+}
 
 main .weather-container .content-container {
     width:100%;
